@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <style>
+            h1{
+                margin-top: 5%px;
+                background-color: rgb(18, 81, 163);
+                color: white;
+            }
+            body{
+                background-color: rgb(0, 183, 255);
+            }
+            </style>
+    <script>
+    function  javascriptForm(){
+            var name = document.myForm.firstName.value;
+            var lastname = document.myForm.surName.value;
+            var other = document.myForm.otherName.value;
+            var subject = document.myForm.subject.value;
+            var message = document.myForm.message.value;
+            var fullname = name+""+ lastname;
+
+            if (name.length<3){
+                alert("first name can't be less than 3 character");
+                return false;
+                }else if (lastname.length<3){
+                    alert("surname can't be less than 3 character");
+                return false;
+                }else if (subject.length<3){
+                    alert("subject can't be less than 3 character");
+                return false;
+                }else if (message.length<3){
+                    alert("message can't be less than 3 character");
+                return false;
+                }else if (fullname!==""){
+                    alert("welcome" +fullname);
+                return false;
+                }
+
+
+    
+    }
+    
+    </script>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+    
+        <h1>Javascript form</h1><br><br>
+        <form select name="myForm"  onsubmit="return javascriptForm()"    class="container">
+                
+            <input class="col-md-6 circle" type="text" name="firstName" placeholder="firstname" required><br><br>
+            <input class="col-md-6" type="text" name="surName" placeholder="surname" required><br><br>
+            <input class="col-md-6" type="text" name="otherName" placeholder="othername" required><br><br>
+            <input class="col-md-6" type="text" name="subject" placeholder="subject" required><br><br>
+            <input class="col-md-6" type="text" name="message" placeholder="message" required><br><br>
+            <input class="col-md-3"type="submit" value="Enter">
+    
+        </form>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
